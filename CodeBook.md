@@ -24,14 +24,14 @@ The data provided for processing provided the following:
 
 ###Data Processing
 The desired output from the processing is a tidy data set that allows for the utilization of the data to better understand and be able to identify data that represents activities of daily living (ADL). The format chosen for this data is a tidy, WIDE data set. The reasons for this choice as the tidy data set format are as follows:
--1. The experiment involves observing ADL per person per activity to better identify activity by data points. According to H. Wickham (see Sources section below), it is easier to make comparisons between groups of observations than between groups of columns.  It is assumed that most comparisons will be across the subject+activity in order to create models that can identify ADL.
--2. The data was provided in a format with the measurements per subject per activity. Providing the wide format was more similar to this than the narrow format therefor it was assumed this format would be more familiar to the end user.
--3. The final output was an average of measurements grouped by subject + activity. THe wide format seemed more logical and better aligned with this format than the narrow.
+- The experiment involves observing ADL per person per activity to better identify activity by data points. According to H. Wickham (see Sources section below), it is easier to make comparisons between groups of observations than between groups of columns.  It is assumed that most comparisons will be across the subject+activity in order to create models that can identify ADL.
+- The data was provided in a format with the measurements per subject per activity. Providing the wide format was more similar to this than the narrow format therefor it was assumed this format would be more familiar to the end user.
+- The final output was an average of measurements grouped by subject + activity. THe wide format seemed more logical and better aligned with this format than the narrow.
 
 The data fits the requirements of a tidy data set as explained below:
--1. Each variable forms a column - the first two columns are fixed variables and identify the subject and activity. THese variables are part of the experimental design and are known in advance.  The remaining columns are the measurement variables for that subject performing that activity. This is the structure recommended by H. Wickham.
--2. Each observation forms a row - the observation is of a subject performing an activity.  Each row represents a unique instance of this, per H. Wickham's recommendations.
--3. Each type of observation unit forms a table - these are all observations used to understand and analyze activities of daily living (ADL) with an observation unit consisting of measurements taken hile a subject performs one activity of daily living.
+- Each variable forms a column - the first two columns are fixed variables and identify the subject and activity. THese variables are part of the experimental design and are known in advance.  The remaining columns are the measurement variables for that subject performing that activity. This is the structure recommended by H. Wickham.
+- Each observation forms a row - the observation is of a subject performing an activity.  Each row represents a unique instance of this, per H. Wickham's recommendations.
+- Each type of observation unit forms a table - these are all observations used to understand and analyze activities of daily living (ADL) with an observation unit consisting of measurements taken hile a subject performs one activity of daily living.
 
 The end result of the data processing produces a file that is the activities of daily living grouped and averaged by subject + activity.  Each of the 30 subjects performed six activities multiple times.  Measurements were limited to those that represented either mean or standard deviation.  Since these specific variables were not called out, any variable that had the term "mean" or "std" was included in the output. (full variable descriptions are below). 
 
