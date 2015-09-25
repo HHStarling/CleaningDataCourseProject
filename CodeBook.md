@@ -159,8 +159,13 @@ Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of 
 - $ angleYgravityMeanAverage                    : num  -0.924 -0.981 -0.986 0.067 -0.102 ...
 - $ angleZgravityMeanAverage                    : num  -0.955 -0.988 -0.992 -0.503 -0.346 ...
 
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
+####Variable 1: SubjectIdentifier
+Description:  This is a unique identifier assigned to each person.
+Class:  numeric
+Values: 1 through 30 for the 30 subjects
+Unit of measure: none
+Notes:  These were provided directly from the raw data file with no transformations.
+
 
 Some information on the variable including:
  - Class of the variable
