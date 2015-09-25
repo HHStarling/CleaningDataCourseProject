@@ -58,8 +58,8 @@ GenerateFile <- function() {
   finalColumns$V2 <- gsub("-mean\\(\\)", "Mean",finalColumns$V2, ignore.case = TRUE)
   finalColumns$V2 <- gsub("-mean", "Mean",finalColumns$V2, ignore.case = TRUE)
   # replace -std with Std
-  finalColumns$V2 <- gsub("-std\\(\\)", "Std",finalColumns$V2, ignore.case = TRUE)
-  finalColumns$V2 <- gsub("-std", "Std",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("-std\\(\\)", "StandardDeviation",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("-std", "StandardDeviation",finalColumns$V2, ignore.case = TRUE)
   # remove parantheses ()
   finalColumns$V2 <- gsub("\\(\\)", "",finalColumns$V2, ignore.case = TRUE)
   # remove individual parantheses
