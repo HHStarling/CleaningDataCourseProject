@@ -161,10 +161,10 @@ Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of 
 
 ####Variable 1: SubjectIdentifier
 Description:  This is a unique identifier assigned to each person.
-Class:  numeric
-Values: 1 through 30 for the 30 subjects
-Unit of measure: none
-Notes:  These were provided directly from the raw data file with no transformations.
+- Class:  numeric
+- Values: 1 through 30 for the 30 subjects
+- Unit of measure: none
+- Notes:  These were provided directly from the raw data file with no transformations.
 
 
 Some information on the variable including:
