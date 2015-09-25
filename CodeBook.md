@@ -23,7 +23,7 @@ The data provided for processing provided the following:
 - An identifier of the subject who carried out the experiment.
 
 ###Data Processing
-The desired output from the processing is a tidy data set that allows for the utilization of the data to better understand and be able to identify data that represents activities of daily living (ADL). The format chosen for this data is a tidy, WIDE data set. The reasons for this choice as the tidy data set format are as follows:
+The desired output from the processing is a tidy data set that allows for the utilization of the data to better understand and be able to identify data that represents activities of daily living (ADL). The format chosen for this data is a tidy, **WIDE data set**. The reasons for this choice as the tidy data set format are as follows:
 - The experiment involves observing ADL per person per activity to better identify activity by data points. According to H. Wickham (see Sources section below), it is easier to make comparisons between groups of observations than between groups of columns.  It is assumed that most comparisons will be across the subject+activity in order to create models that can identify ADL.
 - The data was provided in a format with the measurements per subject per activity. Providing the wide format was more similar to this than the narrow format therefor it was assumed this format would be more familiar to the end user.
 - The final output was an average of measurements grouped by subject + activity. THe wide format seemed more logical and better aligned with this format than the narrow.
