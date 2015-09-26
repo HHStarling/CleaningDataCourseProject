@@ -382,9 +382,9 @@ Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame':	180 obs. of 
 
 ##Sources
 Sources cited in the material above:
-Human Activity Recognition database
+- Human Activity Recognition database
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-Google's R Style Guide was utilized for R standards
+- Google's R Style Guide was utilized for R standards
 https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
-Hadley Wickham paper on tidy data
+- Hadley Wickham paper on tidy data
 http://vita.had.co.nz/papers/tidy-data.pdf
