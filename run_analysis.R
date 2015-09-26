@@ -21,6 +21,7 @@
 
 GenerateFile <- function() {
   # ***** LOAD UP DATA SECTION *****
+  # assuming that the dataset has been downloaded and is in a folder in the working directory
   # rename folder with data if it hasnt happened already
   if(!file.exists("./data")){
     file.rename("UCI HAR Dataset", "data")
@@ -55,11 +56,11 @@ GenerateFile <- function() {
   # Leaving column naming mostly as is to avoid changing something that I cannot confirm
   
   # replace -mean with Mean
-  finalColumns$V2 <- gsub("-mean\\(\\)", "Mean",finalColumns$V2, ignore.case = TRUE)
-  finalColumns$V2 <- gsub("-mean", "Mean",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("-mean\\(\\)", "MEAN",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("-mean", "MEAN",finalColumns$V2, ignore.case = TRUE)
   # replace -std with Std
-  finalColumns$V2 <- gsub("-std\\(\\)", "StandardDeviation",finalColumns$V2, ignore.case = TRUE)
-  finalColumns$V2 <- gsub("-std", "StandardDeviation",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("-std\\(\\)", "SD",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("-std", "SD",finalColumns$V2, ignore.case = TRUE)
   # remove parantheses ()
   finalColumns$V2 <- gsub("\\(\\)", "",finalColumns$V2, ignore.case = TRUE)
   # remove individual parantheses
@@ -69,6 +70,14 @@ GenerateFile <- function() {
   finalColumns$V2 <- gsub(",", "",finalColumns$V2, ignore.case = TRUE)
   # remove hyphens
   finalColumns$V2 <- gsub("-", "",finalColumns$V2, ignore.case = TRUE)
+  # capitalize, use full desciriptors
+  finalColumns$V2 <- gsub("anglet", "angleTime",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("gravity", "Gravity",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("Gyro", "Gyroscope",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("Acc", "Acceleration",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("gravity", "Gravity",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("^t", "time",finalColumns$V2, ignore.case = TRUE)
+  finalColumns$V2 <- gsub("^f", "frequency",finalColumns$V2, ignore.case = TRUE)
   
   # add activity values to each activity data set
   # test activity data
