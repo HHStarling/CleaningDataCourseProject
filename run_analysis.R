@@ -168,6 +168,7 @@ GenerateFile <- function() {
   names(dataGrouped) <- dataNames2
   
   #write to table for output - use pipe | delimeter so as to avoid any confusion
+  #first row of the data set is the header row
   write.table(dataGrouped, row.names=FALSE, file="./data/Variable_Average_By_User.txt", sep="|")
 
 } # end of function
