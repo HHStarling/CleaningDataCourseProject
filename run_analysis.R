@@ -160,7 +160,7 @@ GenerateFile <- function() {
   # group data
   dataGrouped <- group_by(dataCombined2, SubjectIdentifier, ActivityDescription) %>% summarise_each(c("mean"))
   
-  # create new names vector adding "_Average" to each column name
+  # create new names vector adding "Average" to each column name
   dataNames2 <- c("SubjectIdentifier","ActivityDescription")
   for(i in 3:88) {
     dataNames2[i] <- paste(dataNames[i], sep="", "Average")

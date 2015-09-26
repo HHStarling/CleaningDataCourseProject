@@ -235,7 +235,7 @@ Second set is the average of each variable for each activity and each subject. E
   # group data
   dataGrouped <- group_by(dataCombined2, SubjectIdentifier, ActivityDescription) %>% summarise_each(c("mean"))
   
-  # create new names vector adding "_Average" to each column name
+  # create new names vector adding "Average" to each column name
   dataNames2 <- c("SubjectIdentifier","ActivityDescription")
   for(i in 3:88) {
     dataNames2[i] <- paste(dataNames[i], sep="", "Average")
@@ -248,7 +248,7 @@ Second set is the average of each variable for each activity and each subject. E
 
 ```
 
-###Outline of data cleaning steps
+###Overview of data cleaning steps
 THe high level steps for processing and cleaning the data are as follows.  For detailed steps, either the run_analysis.R file has extensive commenting or the README file also has details.
 - The raw data files (test, train, features, and activity data) are each loaded separately into data frames for processing.  Individual processing of each data frame is completed separately and then the final dataset is created by pulling the parts of the data frames together into one frame.
 - The features data contains the list of measurements taken.  This information is used to determine the measurements that have either "mean" or "std" in them.  The results from this search are the final measurements used for the tidy data set.
